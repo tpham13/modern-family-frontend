@@ -16,7 +16,7 @@ class App extends Component {
   // we are also passing another argument {withCredentials: true}; this is the key here! This allows our Rails server to set and read the cookie on the front-end’s browser. ALWAYS pass this argument!
   // using axios instead of fetch
   loginStatus = () => {
-    axios.get('http://localhost:3001/logged_in', 
+    axios.get('http://localhost:3000/logged_in', 
    {withCredentials: true})
     .then(response => {
       if (response.data.logged_in) {
